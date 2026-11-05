@@ -27,8 +27,8 @@ The models are evaluated using Accuracy, AUC, Precision, Recall, F1 Score, and M
 
 ## 2. Dataset Description
 
-**Dataset:** Online Shoppers Purchasing Intention Dataset  
-**Source:** UCI Machine Learning Repository  
+**Dataset:** Online Shoppers Purchasing Intention Dataset
+**Source:** [UCI Machine Learning Repository – Online Shoppers Purchasing Intention Dataset](https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset)
 **Dataset size:** 12,330 instances  
 **Total columns:** 18 (17 input features and 1 target variable)  
 **Problem type:** Binary Classification  
@@ -118,6 +118,17 @@ All five models were evaluated on the same held-out test dataset containing 2,46
 | Naive Bayes | 0.2729 | 0.7334 | 0.1726 | 0.9738 | 0.2933 | 0.1289 |
 | SVM | 0.8873 | 0.8824 | 0.7047 | 0.4686 | 0.5629 | 0.5149 |
 
+**Evaluation Metric Interpretation**
+
+- Accuracy measures the overall proportion of correctly classified sessions.
+- AUC measures the model's ability to distinguish between purchasing and non-purchasing sessions across classification thresholds.
+- Precision measures how many predicted purchase sessions actually resulted in purchases.
+- Recall measures how many actual purchase sessions were correctly identified.
+- F1 Score represents the harmonic mean of Precision and Recall.
+- MCC measures the overall quality of binary classification while accounting for all four confusion matrix outcomes.
+
+Since the dataset is imbalanced, F1 Score, MCC and AUC provide useful complementary perspectives beyond accuracy.
+
 ## 5. Model-wise Observations
 
 ### 5.1 Logistic Regression
@@ -132,7 +143,7 @@ All five models were evaluated on the same held-out test dataset containing 2,46
 ### 5.2 Decision Tree Classifier
 
 - Achieved an accuracy of 85.85%.
-- Recorded a recall of 0.5576, the second-highest among the five models.
+- Recorded a recall of 0.5576, the second-highest among the five models after Gaussian Naive Bayes.
 - Achieved an F1 Score of 0.5497.
 - Its AUC of 0.7356 was lower than those of Logistic Regression and SVM.
 
@@ -189,6 +200,15 @@ Therefore, considering multiple evaluation metrics, SVM is selected as the overa
 
 A Streamlit application has been developed to evaluate the trained classification models using uploaded test data.
 
+**Input Dataset Requirements**
+
+The uploaded CSV must contain:
+- All 17 input features used during model training.
+- The `Revenue` target column containing actual purchase outcomes.
+
+The application loads the selected saved model and its preprocessing pipeline, generates predictions, and evaluates the results against the actual target values. 
+No model retraining takes place during application execution.
+
 ### Application Features
 
 - Upload test data in CSV format.
@@ -201,7 +221,7 @@ A Streamlit application has been developed to evaluate the trained classificatio
 
 ### Application Link
 
-**Live Streamlit Application:** To be updated after Streamlit Community Cloud deployment.
+**Live Streamlit Application:** https://mlassignment2-bmtzfbk5lkxinwftceyqsy.streamlit.app/
 
 ## 8. GitHub Repository
 
