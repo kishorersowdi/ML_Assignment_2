@@ -1,3 +1,4 @@
+# Dependencies for Online Shoppers Purchase Intention
 streamlit==1.66.1
 pandas==2.2.3
 numpy==2.4.6
