@@ -27,8 +27,8 @@ The models are evaluated using Accuracy, AUC, Precision, Recall, F1 Score, and M
 
 ## 2. Dataset Description
 
-**Dataset:** Online Shoppers Purchasing Intention Dataset 
-**Source:** [UCI Machine Learning Repository – Online Shoppers Purchasing Intention Dataset](https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset)
+**Dataset:** Online Shoppers Purchasing Intention Dataset  
+**Source:** [UCI Machine Learning Repository – Online Shoppers Purchasing Intention Dataset](https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset)  
 **Dataset size:** 12,330 instances  
 **Total columns:** 18 (17 input features and 1 target variable)  
 **Problem type:** Binary Classification  
