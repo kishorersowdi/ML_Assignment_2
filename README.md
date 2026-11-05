@@ -131,15 +131,14 @@ Since the dataset is imbalanced, F1 Score, MCC and AUC provide useful complement
 
 ## 5. Model-wise Observations
 
-## 5. Model-wise Observations
-
-| Model | Key Performance Metrics | Strengths | Limitations and Observations |
-|---|---|---|---|
-| **Logistic Regression** | Accuracy: 88.08%<br>AUC: 0.8828<br>Precision: 0.7366<br>Recall: 0.3586<br>F1 Score: 0.4824<br>MCC: 0.4592 | Achieved the highest AUC and precision. Demonstrates good ability to distinguish between purchasing and non-purchasing sessions. | Relatively low recall indicates that many actual purchase sessions were missed. Provides strong ranking and precision performance but is conservative in identifying purchase sessions. |
-| **Decision Tree Classifier** | Accuracy: 85.85%<br>AUC: 0.7356<br>Precision: 0.5420<br>Recall: 0.5576<br>F1 Score: 0.5497<br>MCC: 0.4658 | Achieved the second-highest recall after Gaussian Naive Bayes. Identifies more actual purchasing sessions than Logistic Regression and KNN. | Produces more false positives and has weaker overall discrimination, with lower AUC than Logistic Regression and SVM. |
-| **K-Nearest Neighbors (KNN)** | Accuracy: 87.67%<br>AUC: 0.7633<br>Precision: 0.6822<br>Recall: 0.3822<br>F1 Score: 0.4899<br>MCC: 0.4493 | Demonstrates reasonable overall accuracy and precision. | Has limited ability to identify actual purchasing sessions due to relatively low recall. |
-| **Gaussian Naive Bayes** | Accuracy: 27.29%<br>AUC: 0.7334<br>Precision: 0.1726<br>Recall: 0.9738<br>F1 Score: 0.2933<br>MCC: 0.1289 | Achieved the highest recall, identifying almost all actual purchase sessions. | Very low precision and a large number of false positives. Incorrectly classifies many non-purchasing sessions as purchases, resulting in poor overall performance. |
-| **Support Vector Machine (SVM)** | Accuracy: 88.73%<br>AUC: 0.8824<br>Precision: 0.7047<br>Recall: 0.4686<br>F1 Score: 0.5629<br>MCC: 0.5149 | Achieved the highest accuracy, F1 Score and MCC. Provides the best overall balance among the evaluated models. | AUC is marginally below Logistic Regression, and recall indicates that some actual purchase sessions are still missed. |
+| ML Model Name | Observation about Model Performance |
+|---|---|
+| **Logistic Regression** | Achieved the highest AUC (0.8828) and precision (0.7366). Demonstrates good ability to distinguish between purchasing and non-purchasing sessions. However, its recall (0.3586) is relatively low, indicating that many actual purchase sessions were missed. |
+| **Decision Tree** | Achieved a recall of 0.5576, the second-highest among the five models after Gaussian Naive Bayes. Its F1 Score is 0.5497. However, its AUC (0.7356) is lower than Logistic Regression and SVM, indicating weaker overall discrimination. |
+| **KNN** | Achieved reasonable accuracy (87.67%) and precision (0.6822), but its recall (0.3822) is relatively low. This indicates limited ability to identify actual purchasing sessions. |
+| **Naive Bayes** | Achieved the highest recall (0.9738), identifying almost all actual purchase sessions. However, its precision is very low (0.1726), with a large number of false positives, resulting in poor overall performance. |
+| **Support Vector Machine (SVM)** | Achieved the highest accuracy (88.73%), F1 Score (0.5629), and MCC (0.5149). Its AUC (0.8824) is very close to Logistic Regression. Provides the best overall balance among the evaluated models. |
+| **Overall Winner for the Dataset** | **Support Vector Machine (SVM).** It achieved the highest accuracy, F1 Score, and MCC, demonstrating the strongest overall balance between precision and recall among the five evaluated classifiers. Although Logistic Regression achieved the highest AUC and precision, SVM is selected as the overall winner based on the combined evaluation metrics. |
 
 ## 6. Overall Model Comparison and Conclusion
 
